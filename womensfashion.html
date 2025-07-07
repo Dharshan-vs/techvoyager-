@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TATA CLiQ FASHION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    @media (max-width: 768px) {
+      .navbar-nav {
+        flex-direction: column;
+        align-items: start;
+      }
+      .filter-col {
+        display: none;
+      }
+    }
+    .card-img-top {
+      transition: transform 0.3s ease;
+    }
+    .card:hover .card-img-top {
+      transform: scale(1.1);
+    }
+    .card-hover {
+      position: relative;
+    }
+    .card-hover .fav-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      padding: 5px;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .card-hover:hover .fav-icon {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">TATA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#" class="nav-link text-white mx-2">Tata CLiQ Luxury</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white mx-2">CLiQ Cash</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white mx-2">Gift Card</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white mx-2">CLiQ Card</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white mx-2">Track Orders</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white mx-2">Sign in</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white mx-2">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-dark py-2">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div class="dropdown mb-2">
+        <button class="btn btn-dark btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">Categories</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="womensfashion.html">Womens Fashion</a></li>
+          <li><a class="dropdown-item" href="mensfashion.html">Mens Fashion</a></li>
+          <li><a class="dropdown-item" href="#">Kids Fashion</a></li>
+          <li><a class="dropdown-item" href="#">Beauty</a></li>
+          <li><a class="dropdown-item" href="#">Home & Kitchen</a></li>
+          <li><a class="dropdown-item" href="#">Health & Wellness</a></li>
+          <li><a class="dropdown-item" href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="dropdown mb-2">
+        <button class="btn btn-dark btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">Brand</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Womens Wear</a></li>
+          <li><a class="dropdown-item" href="#">Mens's Wear</a></li>
+          <li><a class="dropdown-item" href="#">Foot Wear</a></li>
+          <li><a class="dropdown-item" href="#">Jewellery</a></li>
+          <li><a class="dropdown-item" href="#">Watch & Accessories</a></li>
+          <li><a class="dropdown-item" href="#">Kids</a></li>
+        </ul>
+      </div>
+      <div class="input-group mb-2" style="max-width: 300px;">
+        <input type="text" class="form-control" placeholder="Search for products">
+        <button class="btn btn-outline-light" type="button">Search</button>
+      </div>
+      <div class="d-flex mb-2">
+        <button class="btn btn-outline-light me-2"><i class="bi bi-heart"></i></button>
+        <button class="btn btn-outline-light"><i class="bi bi-cart"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <h3 class="text-center fw-bold">Home Online</h3>
+    <h6 class="text-center mb-4">products</h6>
+    <div class="row">
+      <div class="col-lg-3 filter-col">
+        <div class="card p-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="fw-bold">Filters</h5>
+            <a href="#" class="text-danger fw-bold">Clear All</a>
+          </div>
+          <hr>
+          <p class="fw-bold mb-1">Department</p>
+          <span class="badge bg-light text-dark">Home <i class="bi bi-x text-secondary"></i></span>
+          <p class="fw-bold mb-1 mt-3">Category</p>
+          <span class="badge bg-light text-dark">Home Accent <i class="bi bi-x text-secondary"></i></span>
+          <p class="fw-bold mb-1 mt-3">Product Type</p>
+          <span class="badge bg-light text-dark">Womens Fashion <i class="bi bi-x text-secondary"></i></span>
+          <hr>
+          <p class="fw-bold d-flex justify-content-between">Brand <span>+</span></p>
+          <p class="fw-bold d-flex justify-content-between">Size <span>+</span></p>
+          <p class="fw-bold d-flex justify-content-between">Discount <span>+</span></p>
+          <p class="fw-bold d-flex justify-content-between">Color Family <span>+</span></p>
+          <p class="fw-bold d-flex justify-content-between">Collection <span>+</span></p>
+          <p class="fw-bold">All Discount</p>
+          <p class="fw-bold d-flex justify-content-between text-danger">Price <span class="text-dark">−</span></p>
+          <a href="#" class="text-danger small">Select All</a>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+          <!-- 9 Product Cards -->
+          <div class="col">
+            <div class="card card-hover">
+              <img src="wf1.webp" class="card-img-top" alt="...">
+              <div class="fav-icon"><i class="bi bi-heart-fill text-danger"></i></div>
+              <div class="card-body">
+                <h5 class="card-title">Purple Anarkali Suit</h5>
+                <p class="card-text">Traditional suit with vibrant hues and floral prints.</p>
+                <a href="#" class="btn btn-primary">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-hover">
+              <img src="wf2.jpg" class="card-img-top" alt="...">
+              <div class="fav-icon"><i class="bi bi-heart-fill text-danger"></i></div>
+              <div class="card-body">
+                <h5 class="card-title">Green Cotton Kurti Set</h5>
+                <p class="card-text">Elegant green kurti with dupatta for everyday wear.</p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-hover">
+              <img src="wf3.avif" class="card-img-top" alt="...">
+              <div class="fav-icon"><i class="bi bi-heart-fill text-danger"></i></div>
+              <div class="card-body">
+                <h5 class="card-title">Rust Red Printed Kurta</h5>
+                <p class="card-text">Earthy tones with bold ethnic print, stylish and comfy.</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-hover">
+              <img src="wf4.jpg" class="card-img-top" alt="...">
+              <div class="fav-icon"><i class="bi bi-heart-fill text-danger"></i></div>
+              <div class="card-body">
+                <h5 class="card-title">White Off-Shoulder Maxi</h5>
+                <p class="card-text">Breezy and chic maxi dress perfect for summer.</p>
+                <a href="#" class="btn btn-primary">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-hover">
+              <img src="wf5.jpg" class="card-img-top" alt="...">
+              <div class="fav-icon"><i class="bi bi-heart-fill text-danger"></i></div>
+              <div class="card-body">
+                <h5 class="card-title">Blush Pink Gown</h5>
+                <p class="card-text">Stylish evening wear in blush tones.</p>
+                <a href="#" class="btn btn-primary">Explore Look</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-hover">
+              <img src="wf6.jpg" class="card-img-top" alt="...">
+              <div class="fav-icon"><i class="bi bi-heart-fill text-danger"></i></div>
+              <div class="card-body">
+                <h5 class="card-title">Teal Printed Kurti</h5>
+                <p class="card-text">Smart teal kurti with prints, ideal for daily wear.</p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-hover">
+              <img src="wf7.jpg" class="card-img-top" alt="...">
+              <div class="fav-icon"><i class="bi bi-heart-fill text-danger"></i></div>
+              <div class="card-body">
+                <h5 class="card-title">Blue Watercolor Midi Dress</h5>
+                <p class="card-text">Artistic blue prints—perfect for outings.</p>
+                <a href="#" class="btn btn-primary">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-hover">
+              <img src="wf8.jpg" class="card-img-top" alt="...">
+              <div class="fav-icon"><i class="bi bi-heart-fill text-danger"></i></div>
+              <div class="card-body">
+                <h5 class="card-title">Purple Printed Wrap Dress</h5>
+                <p class="card-text">Elegant wrap dress with ethnic prints.</p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-hover">
+              <img src="wf9.avif" class="card-img-top" alt="...">
+              <div class="fav-icon"><i class="bi bi-heart-fill text-danger"></i></div>
+              <div class="card-body">
+                <h5 class="card-title">Nude Bodycon Blazer Set</h5>
+                <p class="card-text">Chic nude blazer and dress combo.</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
