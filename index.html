@@ -229,12 +229,12 @@
       </div>
     </div>
   </div>
-<!-- Floating Survey Button -->
+
 <button class="btn btn-danger rounded-circle position-fixed bottom-0 end-0 m-4" data-bs-toggle="modal" data-bs-target="#surveyModal" style="z-index: 999;">
   <i class="bi bi-gift-fill me-1"></i>
 </button>
 
-<!-- Multi-step Survey Modal -->
+
 <div class="modal fade" id="surveyModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -245,10 +245,10 @@
         </div>
 
         <div class="modal-body">
-          <!-- Step 1: Contact Info -->
+
   <form id="surveyForm" action="/submit-form" method="POST">
   <div class="modal-body">
-    <!-- Step 1: Contact Info -->
+
     <div class="step" id="step1">
       <div class="mb-3">
         <label class="form-label">Name</label>
@@ -263,7 +263,6 @@
     
 
 
-          <!-- Step 2: Experience Rating -->
           <div class="step d-none" id="step2">
             <label class="form-label">How would you rate your experience?</label>
             <select class="form-select mb-2" name="experienceRating" required>
@@ -278,7 +277,7 @@
             <button type="button" class="btn btn-primary mt-2" onclick="nextStep(3)">Next</button>
           </div>
 
-          <!-- Step 3: Multiple Choice -->
+
           <div class="step d-none" id="step3">
             <div class="mb-3">
               <label class="form-label">How did you hear about us?</label>
@@ -304,7 +303,7 @@
             <button type="submit" class="btn btn-success">Submit</button>
           </div>
 
-          <!-- Final Step: Coupon Code -->
+
           <div class="step d-none text-center p-4" id="step4">
             <h4>🎉 Thank You!</h4>
             <p>Your 10% Off Coupon Code is:</p>
@@ -325,7 +324,7 @@
   document.getElementById('surveyForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Collect all form data
+
     const formData = new FormData(this);
     const data = {
       name: formData.get('name'),
@@ -336,7 +335,7 @@
       importantFactor: formData.get('importantFactor')
     };
     
-    // Send data to server
+
     fetch('/submit-form', {
       method: 'POST',
       headers: {
@@ -348,7 +347,7 @@
     .then(result => {
       if (result.success) {
         console.log('Data saved successfully');
-        nextStep(4); // Show coupon step
+        nextStep(4); 
       } else {
         alert('Error: ' + result.error);
       }
